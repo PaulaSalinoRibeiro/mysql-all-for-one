@@ -94,13 +94,13 @@ VALUES
 CREATE TABLE SpotifyClone.plans(
     id_plan INT NOT NULL AUTO_INCREMENT,
     type_plan VARCHAR(50) NOT NULL,
-    price DECIMAL NOT NULL,
+    price DECIMAL(4, 2) NOT NULL,
     CONSTRAINT PRIMARY KEY(id_plan)
 ) engine = InnoDB;
 
 INSERT INTO SpotifyClone.plans (type_plan, price)
 VALUES
-  ("gratuito", 0), 
+  ("gratuito", 0.00), 
   ("familiar", 7.99 ),
   ("universitário", 5.99),
   ("pessoal", 6.99);
